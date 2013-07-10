@@ -40,7 +40,7 @@
             <hr />
             <div class="row">
                 <div class="large-6 columns">
-                    <p>This Template is GPLv3. Everyone can use it.</p>
+                    <p>This Template is licensed under M.I.T. License.</p>
                 </div>
                 <div class="large-6 columns">
                     <ul class="inline-list right">
