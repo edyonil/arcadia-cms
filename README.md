@@ -11,5 +11,6 @@ The system will be composed by:
 - User sign up and sign in with profile management.
 - Admin backend with user management.
 - News feed, admin only, with Auth comments.
+- Multilanguage supports (at least two: Italian and English)
 
 Hope you will enjoy with this.
