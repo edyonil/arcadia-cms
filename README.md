@@ -6,12 +6,13 @@ This is a boilerplate made with Laravel 4 to help everyone who want to create, o
  
 The purpose is to create a simple User Managment System with Laravel 4.
  
--The system will be composed by:
+The system will be composed by:
 - Front end made with "Foundation 4" by Zurb (http://foundation.zurb.com/).
 - User sign up and sign in with profile management.
 - Admin backend with user management.
 - News feed, admin only, with Auth comments.
 - Multilanguage supports (at least two: Italian and English)
 
+If you want to contribute feel free to fork this project, pull requests and open isssue tickets.
 
 Hope you will enjoy with this.
