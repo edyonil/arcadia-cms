@@ -1,5 +1,5 @@
-## Laravel-Boilerplate
 ========================
+# Laravel-Boilerplate
 
 Laravel Boilerplate lets you create a Laravel based CMS with just few step of configuration.
 
