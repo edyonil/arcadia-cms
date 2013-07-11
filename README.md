@@ -1,3 +1,4 @@
+[![Build Status](https://api.travis-ci.org/ludo237/laravel-boilerplate.png)](https://travis-ci.org/ludo237/laravel-boilerplate)
 # Laravel-Boilerplate
 
 Laravel Boilerplate lets you create a Laravel based CMS with just few step of configuration.
