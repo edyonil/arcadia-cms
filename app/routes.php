@@ -22,5 +22,4 @@ Route::group( array('prefix' => '/') , function()
 	 * GET Requests
 	 * ---------------------------------------
 	 */
-	Route::get('about', array('as' => 'index.info', 'uses' => 'HomeController@getInfo') );
 });

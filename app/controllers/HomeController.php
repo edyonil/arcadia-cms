@@ -16,7 +16,7 @@ class HomeController extends BaseController {
 	|
 	*/
 
-	public function showWelcome()
+	public function getIndex()
 	{
 		$this->layout->content = View::make('public.index');
 	}
