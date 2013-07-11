@@ -9,9 +9,18 @@
 | It's a breeze. Simply tell Laravel the URIs it should respond to
 | and give it the Closure to execute when that URI is requested.
 |
-*/
-
-Route::get('/', function()
+|__________________________________________________________________________
+ *
+ * Public Route group. From here you can go almost anywhere where Auth is
+ * not required. 
+ */
+Route::group( array('prefix' => '/') , function()
 {
-	return View::make('hello');
+	// Redirect everything to the index ipage
+    Route::any('/','homeController@getIndex');
+    /* ---------------------------------------
+	 * GET Requests
+	 * ---------------------------------------
+	 */
+	Route::get('about', array('as' => 'index.info', 'uses' => 'homeController@getInfo') );
 });
