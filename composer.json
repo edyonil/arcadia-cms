@@ -2,6 +2,7 @@
 	"name": "ludo237/laravel-boilerplate",
 	"description": "User Management System build with Laravel 4.",
 	"keywords": ["framework", "laravel", "boilerplate", "laravel-boilerplate","cms"],
+	"license": "MIT",
 	"require": {
 		"laravel/framework": "4.0.*",
 		"way/generators": "dev-master",
