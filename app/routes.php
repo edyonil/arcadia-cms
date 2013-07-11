@@ -17,10 +17,10 @@
 Route::group( array('prefix' => '/') , function()
 {
 	// Redirect everything to the index ipage
-    Route::any('/','homeController@getIndex');
+    Route::any('/','HomeController@getIndex');
     /* ---------------------------------------
 	 * GET Requests
 	 * ---------------------------------------
 	 */
-	Route::get('about', array('as' => 'index.info', 'uses' => 'homeController@getInfo') );
+	Route::get('about', array('as' => 'index.info', 'uses' => 'HomeController@getInfo') );
 });
