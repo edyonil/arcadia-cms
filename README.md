@@ -1,4 +1,3 @@
-========================
 # Laravel-Boilerplate
 
 Laravel Boilerplate lets you create a Laravel based CMS with just few step of configuration.
@@ -21,7 +20,7 @@ If you want to contribute feel free to fork this project, pull requests and open
 
 Hope you will enjoy with this.
 
-#### How to install
+## How to install
 ===================
 
 Laravel-Boilerplate it's very easy to install. Just clone this repo (or download it) and follow this few steps:
