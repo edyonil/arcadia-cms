@@ -21,7 +21,6 @@ If you want to contribute feel free to fork this project, pull requests and open
 Hope you will enjoy with this.
 
 ## How to install
-===================
 
 Laravel-Boilerplate it's very easy to install. Just clone this repo (or download it) and follow this few steps:
 - Open /app/config/app.php and fill the detail about url, debug and the key. They are very well commented so just go there and read.
