@@ -1,4 +1,4 @@
-## Submitting issues
+### Submitting issues
 
 If you have questions about how to use Laravel Boilerplate, please direct these to the issues page on Github
 
@@ -12,7 +12,7 @@ If your issue appears to be a bug, and hasn't been reported, open a new issue.
 Help us to maximize the effort we can spend fixing issues and adding new
 features, by not reporting duplicate issues.
 
-## Contributing to Source Code
+### Contributing to Source Code
 
 I'd love for you to contribute to our source code and to make Laravel Boilerplate even
 better than it is today!

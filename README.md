@@ -1,5 +1,5 @@
-Laravel-Boilerplate
-=========
+#### Laravel-Boilerplate
+========================
 
 Laravel Boilerplate lets you create a Laravel based CMS with just few step of configuration.
 
@@ -20,3 +20,12 @@ This system will be composed by:
 If you want to contribute feel free to fork this project, pull requests and open issue tickets.
 
 Hope you will enjoy with this.
+
+#### How to install
+===================
+
+Laravel-Boilerplate it's very easy to install. Just clone this repo (or download it) and follow this few steps:
+- Open /app/config/app.php and fill the detail about url, debug and the key. They are very well commented so just go there and read.
+- Open /app/config/database.php and choose the Database you prefer most. The default Database is mysql-osx.
+- Open Terminal and run "php artisan migrate" and if everything is correct you should see your database with all the tables.
+- Run it on a browser and Enjoy.

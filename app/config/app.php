@@ -63,9 +63,11 @@ return array(
 	| to a random, 32 character string, otherwise these encrypted strings
 	| will not be safe. Please do this before deploying an application!
 	|
+	| IMPORTANT: For a random string open terminal and type "php artisan key:generate"
+	|
 	*/
 
-	'key' => 'p7jAiYorjPVVB6fevGYLyTeNEQsGDrtQ',
+	'key' => '9S0IRX0QfNpfb96tqqQkOgBxqyCah73x',
 
 	/*
 	|--------------------------------------------------------------------------
