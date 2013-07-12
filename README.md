@@ -30,4 +30,5 @@ Laravel-Boilerplate it's very easy to install. Just clone this repo (or download
 - Open /app/config/database.php and choose the Database you prefer most. The default Database is mysql-osx.
 - Create the table with the name that you choose.
 - Open Terminal and run "php artisan migrate" and if everything is correct you should see your database with all the tables.
+- If you want to populate your database with some examples just run "php artisan db:seed"
 - Run it on a browser and Enjoy.
