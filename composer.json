@@ -3,6 +3,12 @@
 	"description": "User Management System build with Laravel 4.",
 	"keywords": ["framework", "laravel", "boilerplate", "laravel-boilerplate","cms"],
 	"license": "MIT",
+	"authors": [
+        {
+            "name": "Claudio Ludovico",
+            "email": "ludovico1990@hotmail.it"
+        }
+    ],
 	"require": {
 		"laravel/framework": "4.0.*",
 		"way/generators": "dev-master",
