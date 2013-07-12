@@ -19,13 +19,13 @@ class DatabaseSeeder extends Seeder {
 		$this->call('UsersTableSeeder');
         $this->command->info('Users table seeded!');
 
-        /*$this->call('PostsTableSeeder');
+        $this->call('PostsTableSeeder');
         $this->command->info('Posts table seeded!');
 
         $this->call('CommentsTableSeeder');
         $this->command->info('Comments table seeded!');
 
-        $table->command->info('==== Finish, everythings done! Enjoy ====');*/
+        $this->command->info('==== Finish, everythings done! Enjoy ====');
 	}
 
 }
