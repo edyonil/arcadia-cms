@@ -38,9 +38,9 @@
                 </div>
                 <div class="large-6 columns">
                     <ul class="inline-list right">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="{{ URL::route('home.index')   }}">Home</a></li>
+                        <li><a href="{{ URL::route('home.about')   }}">About this Project</a></li>
+                        <li><a href="{{ URL::route('home.contact') }}">Contact Us</a></li>
                     </ul>
                 </div>
             </div>

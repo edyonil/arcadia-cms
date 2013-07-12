@@ -23,4 +23,19 @@ class HomeController extends BaseController {
 		$this->layout->content = View::make('public.index')->with(compact('posts'));
 	}
 
+	public function getAbout()
+	{
+		$this->layout->content = View::make('public.about');
+	}
+
+	public function getContact()
+	{
+		$this->layout->content = View::make('public.contact');
+	}
+
+	public function postContact()
+	{
+		// TODO : store the messages
+		return Redirect::route('home.contact')->withErrors( array( 'contactUsDone' => 'Thank you for contacting Us!') );
+	}
 }
