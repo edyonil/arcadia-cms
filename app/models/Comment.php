@@ -16,12 +16,12 @@ class Comment extends Eloquent {
 
 	public function post()
 	{
-		$this->belongsTo('Post', 'post_id');
+		return $this->belongsTo('Post', 'post_id');
 	}
 
 	public function user()
 	{
-		$this->belongsTo('User', 'user_id');
+		return $this->belongsTo('User', 'user_id');
 	}
 
 }

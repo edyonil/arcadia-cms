@@ -16,7 +16,7 @@ class Post extends Eloquent {
 
 	public function user()
 	{
-		$this->belongsTo('User', 'user_id');
+		return $this->belongsTo('User', 'user_id');
 	}
 
 }
