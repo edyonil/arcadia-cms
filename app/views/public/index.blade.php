@@ -1,12 +1,16 @@
 @section('content')
-<!-- Main Grid Section -->
-<div class="row"> 
-    <div class="large-12 small-12 columns">
-        <div class="panel">
-            <h5>Hello User</h5>
-            <p>If you have this source you got it from my Github Project so Thank you!.</p>
-        </div>
-    </div>
+<!-- Feeds -->
+@foreach($posts as $post)
+<div class="row panel">
+	<div class="small-12 large-12 columns">
+		<h3 class="left">{{ $post->title }}</h3>
+		<span class="right radius secondary label">{{ $post->user->username }} <small>{{ $post->created_at }}</small></span>
+		<p class="clear">
+			{{ $post->post }}.
+		</p>
+		<ul class="inline-list"></ul>
+	</div>
 </div>
-<!-- End Grid Section -->
+@endforeach
+<!-- End Feeds Section -->
 @stop
