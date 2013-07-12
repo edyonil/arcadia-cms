@@ -9,6 +9,7 @@
 * Version 0.1
 *   Column Name  |  Column Type   |  Column Description
 *      id        |  Integer (AI)  |   Simple the primary key of the table, will be autoincrement and integer.
+*     post_id    |  Integer (FK)  |   The id of the post that has the comment
 *     user_id    |  Integer (FK)  |   The id of the user who makes this comment
 *     comment    |  Text          |   The text of the comment
 *
@@ -29,6 +30,7 @@ class CreateCommentsTable extends Migration {
     {
         Schema::create('comments', function(Blueprint $table) {
             $table->increments('id');
+            $table->integer('post_id')->unsigned()->index();
             $table->integer('user_id')->unsigned()->index();
             $table->text('comment');
             $table->timestamps();
