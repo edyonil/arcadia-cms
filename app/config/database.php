@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'default' => 'mysql',
+	'default' => 'mysql-travis',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -62,6 +62,24 @@ return array(
 			'collation' 	=> 'utf8_unicode_ci',
 			'prefix'    	=> '',
 		),
+
+		/* 
+		 | This is a travis configuration
+		 | DO NOT USE THIS, It's only for testing purpose
+		 | 
+		 */
+		'mysql-travis' => array(
+			'driver'    	=> 'mysql',
+			'host'      	=> '127.0.0.1',
+			'database'  	=> 'boilerplate',
+			'username'  	=> 'travis',
+			'password'  	=> '',
+			'charset'   	=> 'utf8',
+			'collation' 	=> 'utf8_unicode_ci',
+			'prefix'    	=> '',
+		),
+
+
 
 		'sqlite' => array(
 			'driver'   => 'sqlite',
