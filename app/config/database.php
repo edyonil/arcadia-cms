@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'default' => 'mysql-osx',
+	'default' => 'mysql',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -72,9 +72,9 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'database',
+			'database'  => 'boilerplate',
 			'username'  => 'root',
-			'password'  => '',
+			'password'  => 'root',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
