@@ -10,6 +10,9 @@
     <title>Laravel Boiler Plate | Ludo237</title>
     <link rel="stylesheet" href="http://cdn.arcadia.one.6go.it/vendor/foundation/4/css/normalize.min.css">
     <link rel="stylesheet" href="http://cdn.arcadia.one.6go.it/vendor/foundation/4/css/foundation.min.css">
+    <style>
+    .clear{ clear:both; }
+    </style>
 </head>
 <body>
     <!-- Header and Nav -->
