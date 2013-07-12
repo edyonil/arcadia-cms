@@ -1,6 +1,6 @@
 [![Latest Stable Version](https://poser.pugx.org/ludo237/laravel-boilerplate/v/stable.png)](https://packagist.org/packages/ludo237/laravel-boilerplate)
 [![Total Downloads](https://poser.pugx.org/ludo237/laravel-boilerplate/downloads.png)](https://packagist.org/packages/ludo237/laravel-boilerplate)
-[![Build Status](https://travis-ci.org/laravel/framework.png)](https://travis-ci.org/laravel/framework)
+[![Build Status](https://travis-ci.org/ludo237/laravel-boilerplate.png)](https://travis-ci.org/ludo237/laravel-boilerplate)
 # Laravel-Boilerplate
 
 Laravel Boilerplate lets you create a Laravel based CMS with just few step of configuration.
