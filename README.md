@@ -6,7 +6,7 @@
 Laravel Boilerplate lets you create a Laravel based CMS with just few step of configuration.
 
 * Web site: https://github.com/ludo237/laravel-boilerplate
-* Support: http://wwww.twitter.com/ludo237
+* Support: http://www.twitter.com/ludo237
  
 The purpose is to create a simple User Managment System with Laravel 4, because I think it is one of the best Framework
 around at the moment, you should give it a try.
