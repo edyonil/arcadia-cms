@@ -18,7 +18,9 @@ class HomeController extends BaseController {
 
 	public function getIndex()
 	{
-		$this->layout->content = View::make('public.index');
+		// Grab all the posts from the database
+		$posts = Post::all();
+		$this->layout->content = View::make('public.index')->with(compact('posts'));
 	}
 
 }
