@@ -2,8 +2,10 @@
 
 class AdminController extends BaseController {
 
+	protected $layout = 'adminMaster';
+
 	public function getIndex()
 	{
-		return "Hello Admin";
+		$this->layout->content = View::make('private.index');
 	}
 }
