@@ -4,22 +4,15 @@ class HomeController extends BaseController {
 
 	protected $layout = 'homeMaster';
 	/*
-	|--------------------------------------------------------------------------
-	| Default Home Controller
-	|--------------------------------------------------------------------------
-	|
-	| You may wish to use controllers instead of, or in addition to, Closure
-	| based routes. That's great! Here is an example controller method to
-	| get you started. To route to this controller, just add the route:
-	|
-	|	Route::get('/', 'HomeController@showWelcome');
-	|
+	 * --------------------------------------------------------------------------
+	 * GET Controllers
+	 * --------------------------------------------------------------------------
 	*/
 
 	public function getIndex()
 	{
 		// Grab all the posts from the database
-		$posts = Post::all();
+		$posts = Post::paginate(10);
 		$this->layout->content = View::make('public.index')->with(compact('posts'));
 	}
 
@@ -31,6 +24,33 @@ class HomeController extends BaseController {
 	public function getContact()
 	{
 		$this->layout->content = View::make('public.contact');
+	}
+
+	public function getLogin()
+	{
+		$this->layout->content = View::make('public.login');
+	}
+
+
+
+	/* ----------------------------------------------------------------------------
+	 * POST Controllers
+	 * ----------------------------------------------------------------------------
+	 */
+	public function postLogin()
+	{
+		$userData = array(
+			'email' 		=> Input::get('email'),
+			'password' 		=> Input::get('pass'),
+		);
+		if(Auth::attempt($userData))
+		{	// Successful logged in
+		   	return Redirect::route('admin.index');
+		}
+		else
+		{
+			return Redirect::route('home.login')->withErrors( array('loginError' => 'Wrong Email &/Or Password') );
+		}
 	}
 
 	public function postContact()

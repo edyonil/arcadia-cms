@@ -21,10 +21,16 @@
           <!-- Title Area -->
           <li class="name">
             <h1>
-              <a href="#">LBP</a>
+              <a href="{{ URL::route('home.index') }}">Laravel Boilerplate</a>
             </h1>
           </li>
         </ul>
+        <section class="top-bar-section">  
+            <ul class="right">
+                <li class="divider"></li>
+                <li><a href="{{ URL::route('home.login') }}">Hello Guest!</a></li>
+            </ul>
+        </section>
     </nav>
     <!-- End Header and Nav -->
     @yield('content')

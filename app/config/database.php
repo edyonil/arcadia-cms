@@ -1,13 +1,12 @@
 <?php
 
 return array(
-
 	/*
 	|--------------------------------------------------------------------------
 	| PDO Fetch Style
 	|--------------------------------------------------------------------------
 	|
-	| By default, database results will be returned as instances of the PHP
+	| By default, database results will be returned as instances of the PHP-
 	| stdClass object; however, you may desire to retrieve records in an
 	| array format for simplicity. Here you can tweak the fetch style.
 	|
@@ -147,8 +146,7 @@ return array(
 
 	'redis' => array(
 
-		'cluster' => true,
-
+	'cluster' => true,
 		'default' => array(
 			'host'     => '127.0.0.1',
 			'port'     => 6379,

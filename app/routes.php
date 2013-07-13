@@ -22,11 +22,24 @@ Route::group( array('prefix' => '/') , function()
 	 * GET Requests
 	 * ---------------------------------------
 	 */
+    Route::get('login',      array('as' => 'home.login',    'uses' => 'HomeController@getLogin'     ) );
     Route::get('about', 	 array('as' => 'home.about', 	'uses' => 'HomeController@getAbout'		) );
     Route::get('contact-us', array('as' => 'home.contact', 	'uses' => 'HomeController@getContact'	) );
     /* ---------------------------------------
      * POST Requests
      * ---------------------------------------
      */
-    Route::post('contact-us-done', array('as' => 'home.postContact', 'uses' => 'HomeController@postContact') );
+    Route::post('contact-us-done',  array('as' => 'home.postContact', 'uses' => 'HomeController@postContact') );
+    Route::post('login-attempt',    array('as' => 'home.doLogin',     'uses' => 'HomeController@postLogin'  ) );
+});
+
+Route::group( array('prefix' => '/admin', 'before' => 'auth'), function()
+{
+    Route::any('/', array('as' => 'admin.index', 'uses' => 'AdminController@getIndex') );
+
+    Route::get('logout',array('as' => 'home.logout', function()
+    {
+        Auth::logout();
+        return Redirect::route('home.index');
+    }));
 });
