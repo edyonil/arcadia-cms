@@ -17,14 +17,26 @@
 <body>
     <!-- Header and Nav -->
     <nav class="top-bar">
+        <ul class="title-area">
+          <!-- Title Area -->
+          <li class="name">
+            <h1>
+              <a href="{{ URL::route('home.index') }}">Arcadia CMS</a>
+            </h1>
+          </li>
+        </ul>
         <section class="top-bar-section">  
             <ul class="left">
-                <li><a href="#">Manage Post</a></li>
+                <li><a href="{{ URL::route('admin.manageposts') }}">Manage Posts</a></li>
                 <li class="divider"></li> 
-                <li><a href="#">Manage Comment</a></li>
+                <li><a href="{{ URL::route('admin.managecomments') }}">Manage Comments</a></li>
                 <li class="divider"></li>
-                <li><a href="#">Manage Users</a></li>
+                <li><a href="{{ URL::route('admin.manageusers') }}">Manage Users</a></li>
                 <li class="divider"></li>
+            </ul>
+            <ul class="right">
+                <li class="divider"></li>
+                <li><a href="{{ URL::route('admin.logout') }}"> Logout</a></li>
             </ul>
         </section>
     </nav>
