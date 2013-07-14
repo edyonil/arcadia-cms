@@ -1,11 +1,11 @@
 [![Latest Stable Version](https://poser.pugx.org/ludo237/laravel-boilerplate/v/stable.png)](https://packagist.org/packages/ludo237/laravel-boilerplate)
 [![Total Downloads](https://poser.pugx.org/ludo237/laravel-boilerplate/downloads.png)](https://packagist.org/packages/ludo237/laravel-boilerplate)
 [![Build Status](https://travis-ci.org/ludo237/laravel-boilerplate.png)](https://travis-ci.org/ludo237/laravel-boilerplate)
-# Laravel-Boilerplate
+# Arcadia CMS
 
-Laravel Boilerplate lets you create a Laravel based CMS with just few step of configuration.
+Arcadia CMS lets you create a Laravel based CMS with just few step of configuration.
 
-* Web site: https://github.com/ludo237/laravel-boilerplate
+* Web site: https://github.com/ludo237/Arcadia-CMS
 * Support: http://www.twitter.com/ludo237
  
 The purpose is to create a simple User Managment System with Laravel 4, because I think it is one of the best Framework
@@ -25,7 +25,7 @@ Hope you will enjoy with this.
 
 ## How to install
 
-Laravel-Boilerplate it's very easy to install. Just clone this repo (or download it) and follow this few steps:
+Arcadia CMS it's very easy to install. Just clone this repo (or download it) and follow this few steps:
 - Open /app/config/app.php and fill the detail about url, debug and the key. They are very well commented so just go there and read.
 - Open /app/config/database.php and choose the Database you prefer most. The default Database is mysql-osx.
 - Create the table with the name that you choose.
