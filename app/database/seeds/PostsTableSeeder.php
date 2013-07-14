@@ -7,7 +7,7 @@ class PostsTableSeeder extends Seeder {
         Post::create(
             array(
                 'user_id'   => 1,
-                'title'     => "Welcome to Laravel Boilerplate",
+                'title'     => "Welcome to Arcadia CMS",
                 'post'      => "This is the first post created by the seeder. Login with the Admin credential to edit or delete this post. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                  Curabitur semper pulvinar dui, non lacinia nunc pretium eu. Integer pellentesque nisl ut ligula auctor aliquet. In nibh est, sodales a nibh sit amet, auctor faucibus mi.
                                  Proin condimentum id quam non gravida. Interdum et malesuada fames ac ante ipsum primis in faucibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
