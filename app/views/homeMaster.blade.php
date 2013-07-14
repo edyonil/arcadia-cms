@@ -28,7 +28,11 @@
         <section class="top-bar-section">  
             <ul class="right">
                 <li class="divider"></li>
-                <li><a href="{{ URL::route('home.login') }}">Hello Guest!</a></li>
+                @if(Auth::check())
+                    <li><a href="{{ URL::route('admin.index') }}">Hello {{ Auth::user()->username }}!</a></li>
+                @else
+                    <li><a href="{{ URL::route('home.login') }}">Hello Guest!</a></li>
+                @endif
             </ul>
         </section>
     </nav>
