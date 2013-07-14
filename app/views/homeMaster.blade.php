@@ -21,7 +21,7 @@
           <!-- Title Area -->
           <li class="name">
             <h1>
-              <a href="{{ URL::route('home.index') }}">Laravel Boilerplate</a>
+              <a href="{{ URL::route('home.index') }}">Arcadia CMS</a>
             </h1>
           </li>
         </ul>
