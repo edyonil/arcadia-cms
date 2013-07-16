@@ -31,6 +31,32 @@ class PostController extends \BaseController {
 	 */
 	public function store()
 	{
+		$messages = array(
+			'required'	=> "This field is Mandatory!",
+			'max'		=> "Title must have max 100 characters"
+		);
+
+		$rules = array(
+			'pTitle' 	=> 'required|max:100',
+			'pText' 	=> 'required',
+		);
+
+		$validation = Validator::make(Input::all(), $rules, $messages);
+		if($validation->fails())
+		{
+			return Redirect::action('PostController@create')->withErrors($validation)->withInput();
+		}
+		else
+		{
+			$post = new Post;
+			$post->title 	= Input::get('pTitle');
+			$post->post 	= Input::get('pText');
+			$post->user_id 	= Auth::user()->id;
+			if($post->save())
+			{
+				return Redirect::action('PostController@index')->withErrors( array('postActionDone' => 'Your post is alive') );
+			} 
+		}
 	}
 
 	/**
