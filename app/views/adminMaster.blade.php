@@ -27,11 +27,11 @@
         </ul>
         <section class="top-bar-section">  
             <ul class="left">
-                <li><a href="{{ URL::route('admin.manageposts') }}">Manage Posts</a></li>
+                <li><a href="{{ URL::action('PostController@index') }}">Manage Posts</a></li>
                 <li class="divider"></li> 
-                <li><a href="{{ URL::route('admin.managecomments') }}">Manage Comments</a></li>
+                <li><a href="{{ URL::action('CommentController@index') }}">Manage Comments</a></li>
                 <li class="divider"></li>
-                <li><a href="{{ URL::route('admin.manageusers') }}">Manage Users</a></li>
+                <li><a href="{{ URL::action('UserController@index') }}">Manage Users</a></li>
                 <li class="divider"></li>
             </ul>
             <ul class="right">
