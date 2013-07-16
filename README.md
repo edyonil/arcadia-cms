@@ -64,4 +64,6 @@ and if everything is correct you should see your database with all the tables.
 php artisan db:seed
 ```
 
+* Last optional step: Go to /app/database/migrations/relations.sql copy & paste the SQL and use it. 
+
 * Run it in any browser and Enjoy.
