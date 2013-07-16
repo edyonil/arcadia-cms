@@ -37,13 +37,17 @@ Route::group( array('prefix' => '/admin', 'before' => 'auth'), function()
 {
     Route::any('/', array('as' => 'admin.index', 'uses' => 'AdminController@getIndex') );
     /* ---------------------------------------
+     * REST Requests
+     * ---------------------------------------
+     */
+    Route::resource('manage-posts',    'PostController'   );
+    Route::resource('manage-comments', 'CommentController');
+    Route::resource('manage-users',    'UserController'   );
+    /* ---------------------------------------
      * GET Requests
      * ---------------------------------------
      */
-    Route::get('manage-posts',      array('as' => 'admin.manageposts',      'uses' => 'AdminController@getManagePosts'    ) );
-    Route::get('manage-comments',   array('as' => 'admin.managecomments',   'uses' => 'AdminController@getManageComments' ) );
-    Route::get('manage-users',      array('as' => 'admin.manageusers',      'uses' => 'AdminController@getManageUsers'    ) );
-    Route::get('logout',            array('as' => 'admin.logout', function()
+    Route::get('logout',array('as' => 'admin.logout', function()
     {
         Auth::logout();
         return Redirect::route('home.index');
