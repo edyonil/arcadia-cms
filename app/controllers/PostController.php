@@ -60,16 +60,6 @@ class PostController extends \BaseController {
 	}
 
 	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
-	{
-	}
-
-	/**
 	 * Show the form for editing the specified resource.
 	 *
 	 * @param  int  $id
@@ -77,6 +67,8 @@ class PostController extends \BaseController {
 	 */
 	public function edit($id)
 	{
+		$post = Post::find($id);
+		$this->layout->content = View::make('private.postViews.edit')->with(compact('post'));
 	}
 
 	/**
@@ -87,11 +79,41 @@ class PostController extends \BaseController {
 	 */
 	public function update($id)
 	{
+		$post = Post::find($id);
+		if($post != NULL)
+		{
+			$messages = array(
+				'required'	=> "This field is Mandatory!",
+				'max'		=> "Title must have max 100 characters"
+			);
+
+			$rules = array(
+				'pTitle' 	=> 'required|max:100',
+				'pText' 	=> 'required',
+			);
+
+			$validation = Validator::make(Input::all(), $rules, $messages);
+			if($validation->fails())
+			{
+				return Redirect::action('PostController@edit', $post->id)->withErrors($validation)->withInput();
+			}
+			else
+			{
+				$post->title 	= Input::get('pTitle');
+				$post->post 	= Input::get('pText');
+				if($post->save())
+				{
+					return Redirect::action('PostController@index')->withErrors( array('postActionDone' => 'Post saved dude!') );
+				} 
+			}
+		}
 	}
 
 
 	public function showDestroy($id)
 	{
+		$post = Post::find($id);
+		$this->layout->content = View::make('private.postViews.showDestroy')->with(compact('post'));
 	}
 
 	/**
