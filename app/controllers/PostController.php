@@ -10,7 +10,8 @@ class PostController extends \BaseController {
 	 */
 	public function index()
 	{
-		$this->layout->content = View::make('private.postViews.index');
+		$posts = Post::all();
+		$this->layout->content = View::make('private.postViews.index')->with(compact('posts'));
 	}
 
 	/**
@@ -20,6 +21,7 @@ class PostController extends \BaseController {
 	 */
 	public function create()
 	{
+		$this->layout->content = View::make('private.postViews.create');
 	}
 
 	/**
