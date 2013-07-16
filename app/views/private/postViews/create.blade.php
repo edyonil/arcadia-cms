@@ -34,7 +34,7 @@
 					@endif
 				</div>
 			</div>
-			<button type="submit" class="button success">Save Post</button>
+			<button type="submit" class="button success">Create Post</button>
           </fieldset>
 	</form>
 </div>
