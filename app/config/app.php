@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'url' => 'http://localhost/laravel-boilerplate/',
+	'url' => 'http://localhost/arcadia-cms/',
 
 	/*
 	|--------------------------------------------------------------------------
