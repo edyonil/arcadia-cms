@@ -64,4 +64,4 @@ and if everything is correct you should see your database with all the tables.
 php artisan db:seed
 ```
 
-* Run it on a browser and Enjoy.
+* Run it in any browser and Enjoy.
