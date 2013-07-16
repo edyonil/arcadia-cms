@@ -53,7 +53,7 @@ return array(
 		'mysql-osx' => array(
 			'driver'    	=> 'mysql',
 			'host'      	=> 'localhost',
-			'database'  	=> 'boilerplate',
+			'database'  	=> 'arcadia',
 			'unix_socket'   => '/Applications/MAMP/tmp/mysql/mysql.sock',
 			'username'  	=> 'root',
 			'password'  	=> 'root',
@@ -70,7 +70,7 @@ return array(
 		'mysql-travis' => array(
 			'driver'    	=> 'mysql',
 			'host'      	=> '127.0.0.1',
-			'database'  	=> 'boilerplate',
+			'database'  	=> 'arcadia',
 			'username'  	=> 'travis',
 			'password'  	=> '',
 			'charset'   	=> 'utf8',
@@ -89,7 +89,7 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'boilerplate',
+			'database'  => 'arcadia',
 			'username'  => 'root',
 			'password'  => 'root',
 			'charset'   => 'utf8',
