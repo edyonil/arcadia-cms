@@ -26,7 +26,6 @@
 	    	<td>{{ $post->created_at }}</td>
 	    	<td>{{ $post->title }}</td>
 	    	<td><a href="{{ URL::action('PostController@edit', $post->id) }}">Edit</a></td>
-	    	<td><a href="{{ URL::action('PostController@destroy', $post->id) }}">Delete</a></td>
 	    </tr>
 	    @endforeach
 	  </tbody>
