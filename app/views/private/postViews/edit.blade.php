@@ -7,7 +7,8 @@
 		<dd class="active"><a href="{{ URL::action('PostController@edit', $post->id) }}">Editing Post: {{ $post->title }}</a></dd>
 	</dl>
 	<form action="{{ URL::action('PostController@update', $post->id) }}" method="post">
-	<input type="hidden" name="_method" value="put">
+	{{ Form::token() }}
+	<input type="hidden" nam	e="_method" value="put">
 		<fieldset>
             <legend>Editing this awesome Post</legend>
 			<div class="row">
@@ -37,6 +38,7 @@
 				</div>
 			</div>
 			<button type="submit" class="button success">Save Post</button>
+			<a href="{{ URL::route('admin.post.destroy', $post->id) }}" class="button alert">Delete Post</a>
           </fieldset>
 	</form>
 </div>
