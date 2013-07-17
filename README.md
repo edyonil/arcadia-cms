@@ -1,6 +1,6 @@
-[![Latest Stable Version](https://poser.pugx.org/ludo237/laravel-boilerplate/v/stable.png)](https://packagist.org/packages/ludo237/laravel-boilerplate)
-[![Total Downloads](https://poser.pugx.org/ludo237/laravel-boilerplate/downloads.png)](https://packagist.org/packages/ludo237/laravel-boilerplate)
-[![Build Status](https://travis-ci.org/ludo237/laravel-boilerplate.png)](https://travis-ci.org/ludo237/laravel-boilerplate)
+[![Latest Stable Version](https://poser.pugx.org/ludo237/arcadia-cms/v/stable.png)](https://packagist.org/packages/ludo237/arcadia-cms)
+[![Total Downloads](https://poser.pugx.org/ludo237/arcadia-cms/downloads.png)](https://packagist.org/packages/ludo237/arcadia-cms)
+[![Build Status](https://travis-ci.org/ludo237/arcadia-cms.png)](https://travis-ci.org/ludo237/arcadia-cms)
 # Arcadia CMS
 
 Arcadia CMS lets you create a Laravel based CMS with just few steps of configuration.
@@ -18,7 +18,7 @@ This system will be composed by:
 - Multilanguage supports (at least two: Italian and English)
 
 If you want to contribute feel free to fork this project, pull requests and open issue tickets
- please read the <a href="https://github.com/ludo237/Arcadia-CMS/blob/master/CONTRIBUTING.md" target="_blank">Contributing Rules</a> first.
+ please read the <a href="https://github.com/ludo237/arcadia-cms/blob/master/CONTRIBUTING.md" target="_blank">Contributing Rules</a> first.
 
 Hope you will enjoy with this.
 
