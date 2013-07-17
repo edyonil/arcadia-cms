@@ -47,6 +47,8 @@ Route::group( array('prefix' => '/admin', 'before' => 'auth'), function()
      * GET Requests
      * ---------------------------------------
      */
+    Route::get('manage-posts/{id}/delete', array( 'as' => 'admin.post.destroy', 'uses' => 'PostController@showDestroy') );
+
     Route::get('logout',array('as' => 'admin.logout', function()
     {
         Auth::logout();
