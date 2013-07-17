@@ -1,7 +1,7 @@
 {
-	"name": "ludo237/Arcadia-CMS",
+	"name": "ludo237/arcadia-cms",
 	"description": "User Management System build with Laravel 4.",
-	"keywords": ["framework", "laravel", "boilerplate", "laravel-boilerplate","cms","Arcadia-CMS","Arcadia"],
+	"keywords": ["framework", "laravel", "boilerplate", "laravel-boilerplate","cms","arcadia-cms","Arcadia"],
 	"license": "MIT",
 	"authors": [
         {
