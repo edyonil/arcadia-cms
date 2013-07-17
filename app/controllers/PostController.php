@@ -109,7 +109,6 @@ class PostController extends \BaseController {
 		}
 	}
 
-
 	public function showDestroy($id)
 	{
 		$post = Post::find($id);
@@ -124,5 +123,8 @@ class PostController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
+		$post = Post::find($id);
+		$post->delete();
+		return Redirect::action('PostController@index')->withErrors( array('postActionDone' => 'Post '.$post->title.' deleted!') );
 	}
 }
