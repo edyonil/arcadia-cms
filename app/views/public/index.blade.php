@@ -6,7 +6,7 @@
 		<h3 class="left">{{ $post->title }}</h3>
 		<span class="right radius secondary label">{{ $post->user->username }} <small>{{ $post->created_at }}</small></span>
 		<p class="clear">
-			{{ $post->post }}.
+			{{ nl2br($post->post) }}
 		</p>
 		<ul class="inline-list"></ul>
 	</div>
