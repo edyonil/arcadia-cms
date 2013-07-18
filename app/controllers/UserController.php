@@ -10,7 +10,8 @@ class UserController extends \BaseController {
 	 */
 	public function index()
 	{
-		$this->layout->content = View::make('private.userViews.index');
+		$users = User::all();
+		$this->layout->content = View::make('private.userViews.index')->with(compact('users'));
 	}
 
 	/**
@@ -20,6 +21,7 @@ class UserController extends \BaseController {
 	 */
 	public function create()
 	{
+		$this->layout->content = View::make('private.userViews.create');
 	}
 
 	/**
