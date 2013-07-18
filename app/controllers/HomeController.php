@@ -45,7 +45,14 @@ class HomeController extends BaseController {
 		);
 		if(Auth::attempt($userData))
 		{	// Successful logged in
-		   	return Redirect::route('admin.index');
+			if(Auth::user()->role_id == 1)
+			{
+		   		return Redirect::route('admin.index');
+			}
+			else
+			{
+				return "I'm sorry, I've create only the admin panel now";
+			}
 		}
 		else
 		{
