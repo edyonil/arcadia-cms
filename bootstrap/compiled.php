@@ -336,7 +336,7 @@ class Application extends Container implements HttpKernelInterface, ResponsePrep
     }
     public static function getBootstrapFile()
     {
-        return '/Applications/MAMP/htdocs/laravel-boilerplate/vendor/laravel/framework/src/Illuminate/Foundation' . '/start.php';
+        return '/Applications/MAMP/htdocs/arcadia-cms/vendor/laravel/framework/src/Illuminate/Foundation' . '/start.php';
     }
     public function startExceptionHandling()
     {
@@ -2167,9 +2167,13 @@ class NativeSessionStorage implements SessionStorageInterface
         }
         $ret = session_regenerate_id($destroy);
         session_write_close();
-        $backup = $_SESSION;
-        session_start();
-        $_SESSION = $backup;
+        if (isset($_SESSION)) {
+            $backup = $_SESSION;
+            session_start();
+            $_SESSION = $backup;
+        } else {
+            session_start();
+        }
         return $ret;
     }
     public function save()
@@ -9980,7 +9984,7 @@ class PrettyPageHandler extends Handler
             return Handler::DONE;
         }
         if (!($resources = $this->getResourcesPath())) {
-            $resources = '/Applications/MAMP/htdocs/laravel-boilerplate/vendor/filp/whoops/src/Whoops/Handler' . '/../Resources';
+            $resources = '/Applications/MAMP/htdocs/arcadia-cms/vendor/filp/whoops/src/Whoops/Handler' . '/../Resources';
         }
         $templateFile = "{$resources}/pretty-template.php";
         $cssFile = "{$resources}/pretty-page.css";
