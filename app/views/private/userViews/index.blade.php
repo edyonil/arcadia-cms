@@ -11,6 +11,12 @@
           <a href="" class="close">×</a>
         </div>
 	@endif
+	@if( $errors->has('userActionError') )
+		<div data-alert class="alert-box alert">
+          {{ $errors->first('userActionError', ':message') }}
+          <a href="" class="close">×</a>
+        </div>
+	@endif
 	<p>You have {{ count($users) }} users register :-) </p>
 	<table class="large-12">
 	  <thead>
