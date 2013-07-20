@@ -48,14 +48,21 @@ class PostController extends \BaseController {
 		}
 		else
 		{
-			$post = new Post;
-			$post->title 	= Input::get('pTitle');
-			$post->post 	= Input::get('pText');
-			$post->user_id 	= Auth::user()->id;
-			if($post->save())
+			try
 			{
-				return Redirect::action('PostController@index')->withErrors( array('postActionDone' => 'Your post is alive') );
-			} 
+				Post::create(
+		            array(
+		                'user_id'   => Auth::user()->id,
+		                'title'     => Input::get('pTitle'),
+		                'post'      => Input::get('pText')
+		            )
+		        );
+		        return Redirect::action('PostController@index')->withErrors( array('postActionDone' => 'Your post is alive') );
+			}
+			catch (Exception $e)
+			{
+				return Redirect::action('PostController@create')->withInput(); // TODO Handle message
+			}
 		}
 	}
 
