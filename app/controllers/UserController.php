@@ -31,16 +31,38 @@ class UserController extends \BaseController {
 	 */
 	public function store()
 	{
-	}
-
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
-	{
+		$rules = array(
+			'uName' 	=> 'required|min:3',
+			'uSurname' 	=> 'required|min:3',
+			'uEmail'	=> 'required|email|unique:users,email',
+			'uNick'		=> 'required|unique:users,username',
+			'uPass'		=> 'required|alpha_num|min:6'
+		);
+		$valid = Validator::make(Input::all(), $rules);
+		if($valid->fails())
+		{
+			return Redirect::action('UserController@create')->withErrors($valid)->withInput();
+		}
+		else
+		{
+			try
+			{
+				$user = User::create( array(
+	        		'role_id'	=> 	2,
+	        		'name'		=>	Input::get('uName'),
+	        		'surname'	=> 	Input::get('uSurname'),
+	        		'email' 	=> 	Input::get('uEmail'),
+	        		'username'	=>	Input::get('uNick'),
+	        		'password'	=>	Hash::make(Input::get('uPass'))
+	        		)
+	        	);
+	        	return Redirect::action('UserController@index')->withErrors( array('userActionDone' => 'User: '.$user->username. ' created') );
+			}
+			catch (Exception $e)
+			{
+				return Redirect::action('UserController@create')->withInput(); // TODO : handle message
+			}
+		}
 	}
 
 	/**
@@ -51,6 +73,8 @@ class UserController extends \BaseController {
 	 */
 	public function edit($id)
 	{
+		$user = User::find($id);
+		$this->layout->content = View::make('private.userViews.create')->with(compact('user'));
 	}
 
 	/**
