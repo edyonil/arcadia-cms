@@ -74,7 +74,7 @@ class UserController extends \BaseController {
 	public function edit($id)
 	{
 		$user = User::find($id);
-		$this->layout->content = View::make('private.userViews.create')->with(compact('user'));
+		$this->layout->content = View::make('private.userViews.edit')->with(compact('user'));
 	}
 
 	/**
@@ -85,11 +85,46 @@ class UserController extends \BaseController {
 	 */
 	public function update($id)
 	{
+		$user = User::find($id);
+		$rules = array(
+			'uName' 	=> 'required|min:3',
+			'uSurname' 	=> 'required|min:3',
+			'uEmail'	=> 'required|email|unique:users,email',
+			'uNick'		=> 'required|unique:users,username',
+			'uPass'		=> 'alpha_num|min:6'
+		);
+		$valid = Validator::make(Input::all(), $rules);
+		if($valid->fails())
+		{
+			return Redirect::action('UserController@edit', $user->id)->withErrors($valid)->withInput();
+		}
+		else
+		{
+			$password = Input::get('uPass');
+			if(isset($password) && !empty($password))
+			{
+				$user->password	= Hash::make(Input::get('uPass'));
+			}
+    		$user->name		= Input::get('uName');
+    		$user->surname	= Input::get('uSurname');
+    		$user->email 	= Input::get('uEmail');
+    		$user->username	= Input::get('uNick');
+	        if($user->save())
+	        {
+	        	return Redirect::action('UserController@index')->withErrors( array('userActionDone' => 'User: '.$user->username. ' updated') );
+	        }
+			else
+			{
+				return Redirect::action('UserController@edit', $user->id)->withInput(); // TODO : handle message
+			}
+		}
 	}
 
 
 	public function showDestroy($id)
 	{
+		$user = User::find($id);
+		$this->layout->content = View::make('private.userViews.showDestroy')->with(compact('user'));
 	}
 
 	/**
@@ -100,5 +135,15 @@ class UserController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
+		$user = User::find($id);
+		if($user->id == Auth::user()->id)
+		{
+			return Redirect::action('UserController@index')->withErrors( array('userActionError' => "Dude com'on you can't delete yourself!!! ") );
+		}
+		else
+		{
+			$user->delete();
+			return Redirect::action('UserController@index')->withErrors( array('userActionDone' => 'User '.$user->username.' deleted!') );
+		}
 	}
 }
