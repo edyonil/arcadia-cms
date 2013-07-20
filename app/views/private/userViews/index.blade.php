@@ -25,7 +25,7 @@
 	    <tr>
 	    	<td>{{ $user->role->name }}</td>
 	    	<td>{{ $user->username }}</td>
-	    	<td></td>
+	    	<td><a href="{{ URL::action('UserController@edit',$user->id) }}" title="Edit {{ $user->username }}">Edit</a></td>
 	    </tr>
 	    @endforeach
 	  </tbody>
