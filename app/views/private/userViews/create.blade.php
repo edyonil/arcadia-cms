@@ -21,7 +21,7 @@
 						<small class="error">{{ $errors->first('uName', ':message') }}</small>
 					@else
 						<label for="uName">Name</label>
-						<input type="text" name="uName" x-webkit-speech required placeholder="Write the name">
+						<input type="text" name="uName" x-webkit-speech required placeholder="Write the name" value="{{ Input::old('uName') }}">
 					@endif
 				</div>
 			</div>
@@ -33,7 +33,7 @@
 						<small class="error">{{ $errors->first('uSurname', ':message') }}</small>
 					@else
 						<label for="uSurname">Surname</label>
-						<input type="text" name="uSurname" x-webkit-speech required placeholder="Write the surname">
+						<input type="text" name="uSurname" x-webkit-speech required placeholder="Write the surname" value="{{ Input::old('uSurname') }}">
 					@endif
 				</div>
 			</div>
@@ -45,7 +45,7 @@
 						<small class="error">{{ $errors->first('uEmail', ':message') }}</small>
 					@else
 						<label for="uEmail">Email</label>
-						<input type="email" name="uEmail" x-webkit-speech required placeholder="example@newuser.it, must be unique">
+						<input type="email" name="uEmail" x-webkit-speech required placeholder="example@newuser.it, must be unique" value="{{ Input::old('uEmail') }}">
 					@endif
 				</div>
 			</div>
@@ -57,7 +57,7 @@
 						<small class="error">{{ $errors->first('uNick', ':message') }}</small>
 					@else
 						<label for="uNick">Username</label>
-						<input type="text" name="uNick" x-webkit-speech required placeholder="Write the username">
+						<input type="text" name="uNick" x-webkit-speech required placeholder="Write the username" value="{{ Input::old('uNik') }}">
 					@endif
 				</div>
 			</div>
