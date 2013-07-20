@@ -8,7 +8,7 @@
 	</dl>
 	<form action="{{ URL::action('PostController@update', $post->id) }}" method="post">
 	{{ Form::token() }}
-	<input type="hidden" nam	e="_method" value="put">
+	<input type="hidden" name="_method" value="put">
 		<fieldset>
             <legend>Editing this awesome Post</legend>
 			<div class="row">
