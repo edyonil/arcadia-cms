@@ -10,7 +10,8 @@ class CommentController extends \BaseController {
 	 */
 	public function index()
 	{
-		$this->layout->content = View::make('private.commentViews.index');
+		$comments = Comment::all();
+		$this->layout->content = View::make('private.commentViews.index')->with(compact('comments'));
 	}
 
 	/**
