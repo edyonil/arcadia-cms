@@ -16,15 +16,15 @@
  */
 Route::group( array('prefix' => '/') , function()
 {
-	// Redirect everything to the index ipage
+    // Redirect everything to the index ipage
     Route::any('/', array('as' => 'home.index', 'uses' => 'HomeController@getIndex') );
     /* ---------------------------------------
-	 * GET Requests
-	 * ---------------------------------------
-	 */
-    Route::get('login',      array('as' => 'home.login',    'uses' => 'HomeController@getLogin'     ) );
-    Route::get('about', 	 array('as' => 'home.about', 	'uses' => 'HomeController@getAbout'		) );
-    Route::get('contact-us', array('as' => 'home.contact', 	'uses' => 'HomeController@getContact'	) );
+     * GET Requests
+     * ---------------------------------------
+     */
+    Route::get('login',      array('as' => 'home.login',    'uses' => 'HomeController@getLogin'      ) );
+    Route::get('about',	     array('as' => 'home.about', 	'uses' => 'HomeController@getAbout'  ) );
+    Route::get('contact-us', array('as' => 'home.contact', 	'uses' => 'HomeController@getContact') );
     /* ---------------------------------------
      * POST Requests
      * ---------------------------------------
@@ -33,6 +33,10 @@ Route::group( array('prefix' => '/') , function()
     Route::post('login-attempt',    array('as' => 'home.doLogin',     'uses' => 'HomeController@postLogin'  ) );
 });
 
+/*
+ * Admin routes group
+ * Only auth user can see this place!
+ */
 Route::group( array('prefix' => '/admin', 'before' => 'auth'), function()
 {
     Route::any('/', array('as' => 'admin.index', 'uses' => 'AdminController@getIndex') );
