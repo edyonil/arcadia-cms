@@ -28,6 +28,12 @@ Hope you will enjoy with this.
 
 Arcadia CMS it's very easy to install. Just clone this repo (or download it) and follow this few steps:
 
+* Generate the key via Terminal using
+
+```
+php artisan key:generate
+```
+
 * Open /app/config/app.php and fill the detail about url, debug. They are very well commented so just go there and read the comments. This is an example:
 
 ```
@@ -37,27 +43,40 @@ Arcadia CMS it's very easy to install. Just clone this repo (or download it) and
 )
 ```
 
-* Generate the key via Terminal using
-
-```
-php artisan key:generate
-```
-
-* Open /app/config/database.php and choose the Database you prefer most. The default Database is mysql-travis due testing purpose.
+* Open /bootstrap/start.php file and change the local machine name with your machine name. This is useful because you can set as many configurations as possible.
 
 ```
 (
-	'default' => 'mysql-travis',
+	'local' 	=> array('local.*','Your-machine-name.*');
 )
 ```
 
-* Create the Database with the name that you choose.
+* Open /app/config/database.php and choose the Database you prefer most. The default Database is mysql and it has travis data due testing purpose. You should use the /app/config/local/database.php in order to have a local database setting.
+
+```
+(
+	'default' => 'mysql',
+	'mysql' => array(
+		'driver'    	=> 'mysql',
+		'host'      	=> '127.0.0.1',
+		'database'  	=> 'arcadia',
+		'username'  	=> 'travis',
+		'password'  	=> '',
+		'charset'   	=> 'utf8',
+		'collation' 	=> 'utf8_unicode_ci',
+		'prefix'    	=> '',
+	),
+)
+```
+
+* Create the Database with the name that you want. The default is arcadia.
 
 * Open Terminal and run
 
 ```
 php artisan migrate
 ```
+
 and if everything is correct you should see your database with all the tables.
 
 * If you want to populate your database with some examples just run
@@ -66,6 +85,6 @@ and if everything is correct you should see your database with all the tables.
 php artisan db:seed
 ```
 
-* Last optional step: Go to /app/database/migrations/relations.sql copy & paste the SQL and use it. 
+* Last optional step: Go to /app/database/migrations/relations.sql copy & paste the SQL and use it. I've to understand how merge this with migrations sorry.
 
 * Run it in any browser and Enjoy.
