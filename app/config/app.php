@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'url' => 'http://localhost/arcadia-cms/',
+	'url' => 'http://localhost:8888/arcadia-cms/',
 
 	/*
 	|--------------------------------------------------------------------------
