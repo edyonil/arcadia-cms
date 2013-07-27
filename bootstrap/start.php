@@ -27,9 +27,7 @@ $app->redirectIfTrailingSlash();
 */
 
 $env = $app->detectEnvironment(array(
-
-	'local' => array('your-machine-name'),
-
+	'local' 	=> array('local.*','Ludo-MBPro.*'), // Change it with your local computer name, it help you handle the local dev
 ));
 
 /*
