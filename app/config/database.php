@@ -25,7 +25,7 @@ return array(
 	|
 	*/
 
-	'default' => 'mysql-travis',
+	'default' => 'mysql',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -46,28 +46,11 @@ return array(
 	'connections' => array(
 
 		/* 
-		 | Most of the time on OSX there's MAMP and to make Laravel works wth it you should include the socket 
-		 | Think about this connection as development connection
-		 | 
-		 */
-		'mysql-osx' => array(
-			'driver'    	=> 'mysql',
-			'host'      	=> 'localhost',
-			'database'  	=> 'arcadia',
-			'unix_socket'   => '/Applications/MAMP/tmp/mysql/mysql.sock',
-			'username'  	=> 'root',
-			'password'  	=> 'root',
-			'charset'   	=> 'utf8',
-			'collation' 	=> 'utf8_unicode_ci',
-			'prefix'    	=> '',
-		),
-
-		/* 
 		 | This is a travis configuration
 		 | DO NOT USE THIS, It's only for testing purpose
 		 | 
 		 */
-		'mysql-travis' => array(
+		'mysql' => array(
 			'driver'    	=> 'mysql',
 			'host'      	=> '127.0.0.1',
 			'database'  	=> 'arcadia',
@@ -78,25 +61,11 @@ return array(
 			'prefix'    	=> '',
 		),
 
-
-
 		'sqlite' => array(
 			'driver'   => 'sqlite',
 			'database' => __DIR__.'/../database/production.sqlite',
 			'prefix'   => '',
 		),
-
-		'mysql' => array(
-			'driver'    => 'mysql',
-			'host'      => 'localhost',
-			'database'  => 'arcadia',
-			'username'  => 'root',
-			'password'  => 'root',
-			'charset'   => 'utf8',
-			'collation' => 'utf8_unicode_ci',
-			'prefix'    => '',
-		),
-
 
 		'pgsql' => array(
 			'driver'   => 'pgsql',
