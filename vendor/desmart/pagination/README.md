@@ -1,5 +1,7 @@
 ## Overview
 
+[![Build Status](https://api.travis-ci.org/DeSmart/pagination.png)](https://travis-ci.org/DeSmart/pagination)
+
 This package is an extension for Laravel4 pagination module.
 
 It provides new functionalities:
@@ -38,8 +40,17 @@ This package should not break compatibility with Laravel pagination module.
 ### In controller
 
 ```php
+// example route (app/routes.php)
+Route::get('/products/{page}.html', array('as' => 'products.list', 'uses' => ''));
+
+// use the current route
 $list = Product::paginate(10)
   ->useCurrentRoute()
+  ->setProximity(3);
+  
+// use custom route
+$list = Product::paginate(10)
+  ->route('products.list')
   ->setProximity(3);
 ```
 
