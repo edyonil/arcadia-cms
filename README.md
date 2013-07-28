@@ -8,7 +8,7 @@ Arcadia CMS lets you create a Laravel based CMS with just few steps of configura
 * Repo: https://github.com/ludo237/Arcadia-CMS
 * Support: http://www.twitter.com/ludo237
 * Web Site: http://ludo237.github.io/arcadia-cms/
-* Demo Site: ASAP
+* Demo Site: ASAP with version alpha 2
  
 The purpose is create a simple User Managment System with Laravel 4 because I think it is one of the best PHP Framework at the moment, you should give it a try.
  
