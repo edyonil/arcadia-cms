@@ -14,6 +14,12 @@ class Post extends Eloquent {
 	 */
 	protected $table = 'posts';
 
+	/*
+	 * --------------------------------------
+	 * Joinable fields
+	 * --------------------------------------
+	*/
+
 	public function user()
 	{
 		return $this->belongsTo('User', 'user_id');
