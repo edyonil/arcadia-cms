@@ -41,6 +41,7 @@ class CreateUsersTable extends Migration {
             $table->string('password');
             $table->timestamps();
             $table->softDeletes();
+            $table->foreign('role_id')->references('id')->on('roles')->onDelete('restrict')->onUpdate('cascade');
         });
     }
 
